@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    li {
+      cursor: pointer;
+      
+    }
+  </style>
+</head>
+<body>
+  <input type="text" id="insert"/>
+  <ul id="wrapper"></ul>
+
+  <script>
+    let pokemons = ["Pikachu", "Bulbasaur"];
+    let wrapper = document.getElementById('wrapper');
+    let input = document.getElementById('insert');
+
+    for(pokemon of pokemons) {
+      let li = document.createElement('li');
+      li.innerText = pokemon;
+      li.addEventListener('click', () => {
+        input.value = li.innerText;
+      })
+      wrapper.appendChild(li);
+    }
+  </script>
+</body>
+</html>
