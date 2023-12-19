@@ -9,28 +9,52 @@
 
 <section>
     <a href="www.google.com" class="one two three">
-        <b>Lorem</b> ipsum dolor sit amet, consectetur adipisicing elit. Aliquam commodi nam necessitatibus possimus qui quidem reiciendis reprehenderit sint ut. Aliquid assumenda culpa doloribus exercitationem illum iure magnam necessitatibus rem sit.
+        <b>Lorem</b> ipsum dolor sit amet, consectetur adipisicing elit. 
+        Aliquam commodi nam necessitatibus possimus qui quidem reiciendis reprehenderit sint ut. 
+        Aliquid assumenda culpa doloribus exercitationem illum iure magnam necessitatibus rem sit.
+        <p id="toto">
+        ipsum dolor sit amet, consectetur adipisicing elit.
+        </p>
     </a>
+    
 </section>
 
 <!-- À appeler dans un js à part -->
 <script type="text/javascript">
     let link = document.querySelector('a');
+    
+    for(let i =0; i< link.children.length; i++){
+        console.log ("-->" + link.children[i].id);
+        console.log ("----->" + link.children[i].nodeType);
+        if (link.children[i] == Node.ELEMENT_NODE){
+            console.log (`Cet id est un vrai`);
+        } else {
+            console.log(`Ce n'est pas un vrai id`)
+        }
+    }
 
-    console.log("À partir de la variable link, afficher les informations ci-dessous");
-    console.log("-----------------------------------");
-    console.log("Afficher le contenu html :");
-    // console.log(link. );
-    console.log("-----------------------------------");
-    console.log("Afficher le texte :");
-    // console.log(link. );
-    console.log("-----------------------------------");
-    console.log("Afficher l'id :");
-    // console.log(link. );
-    console.log("-----------------------------------");
-    console.log("Afficher les classes :");
-    // console.log(link. );
-    console.log("-----------------------------------");
+//     for(let i =0; i< link.children.length; i++){
+    
+//     if (link.children[i].id !== " "){
+//         console.log ("nice :" + link.children[i].id);
+//         break;
+//     } 
+// }
+
+    // console.log("À partir de la variable link, afficher les informations ci-dessous");
+    // console.log("-----------------------------------");
+    // console.log("Afficher le contenu html :");
+    // console.log(link.innerHTML);
+    // console.log("-----------------------------------");
+    // console.log("Afficher le texte :");
+    // console.log(link.innerText);
+    // console.log("-----------------------------------");
+    // console.log("Afficher l'id :");
+    // // console.log(link.nodeName[""]);
+    // console.log("-----------------------------------");
+    // console.log("Afficher les classes :");
+    // console.log(link.classList);
+    // console.log("-----------------------------------");
 </script>
 </body>
 </html>

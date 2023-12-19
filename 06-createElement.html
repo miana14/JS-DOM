@@ -13,6 +13,11 @@
 <!-- À appeler dans une feuille js à part -->
 <script type="text/javascript">
     let coffee = document.querySelector('#coffee');
+    let newSpan = document.createElement("span");
+    coffee.appendChild(newSpan);
+    newSpan.className="selected"; // ou classList.add('selected');
+    newSpan.innerText ="Nescafé";
+    coffee.style.color ="brown";
 
     /*
      * Créer et "injecter" dans coffee un élément (au sens du DOM) de type "span" avec le café de votre choix.
